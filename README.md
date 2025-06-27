@@ -26,7 +26,7 @@ PICO_SDK_PATH=/path/to/pico-sdk cmake ..
 make
 ```
 
-After successful compilation, the `pico-usb-audio-fx.uf2` binary will be produced. Simply drag and drop this file onto your Raspberry Pi Pico W while in BOOTSEL mode to install.
+After successful compilation, the `pico-usb-audio-fx.uf2` binary will be produced. Simply drag and drop this file onto your Raspberry Pi Pico while in BOOTSEL mode to install.
 
 Create a simple send-return loop—either with your DAW’s routing plug-in (e.g., Logic Pro: _Utility > I/O_) or a loopback utility. Feed your host audio to _Pico Audio FX TapeStop_ IN, and monitor the effected signal coming back on _Pico Audio FX TapeStop_ OUT.
 
