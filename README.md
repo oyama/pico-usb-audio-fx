@@ -21,6 +21,7 @@ To compile and install this project, a setup with the [pico-sdk](https://github.
 ```bash
 git clone https://github.com/oyama/pico-usb-audio-fx.git
 cd pico-usb-audio-fx
+git submodule update --init
 mkdir build; cd build
 PICO_SDK_PATH=/path/to/pico-sdk cmake ..
 make

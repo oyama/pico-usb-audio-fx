@@ -3,6 +3,7 @@ cmake_minimum_required(VERSION 3.13...3.27)
 include(pico_sdk_import.cmake)
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 17)
+set(PICO_TINYUSB_PATH ${CMAKE_CURRENT_LIST_DIR}/lib/tinyusb)
 project(pico-usb-audio-fx C CXX ASM)
 pico_sdk_init()
 
@@ -11,8 +12,9 @@ add_executable(${CMAKE_PROJECT_NAME}
   src/usb_descriptors.c
   src/led.c
 )
-target_sources(${CMAKE_PROJECT_NAME} PRIVATE src/fx_tapestop.c)
+#target_sources(${CMAKE_PROJECT_NAME} PRIVATE src/fx_tapestop.c)
 #target_sources(${CMAKE_PROJECT_NAME} PRIVATE src/fx_lpf.c)
+target_sources(${CMAKE_PROJECT_NAME} PRIVATE src/fx_stutter.c)
 
 target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_LIST_DIR}/include)
 target_link_libraries(${CMAKE_PROJECT_NAME}
